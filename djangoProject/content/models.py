@@ -30,9 +30,9 @@ class Category(models.Model):
         return ('view_category', None, { 'slug': self.slug })
 
 class Event(models.Model):
-title= models.CharField(max_length=100, unique=True)
-def __str__(self):
-return '%s' % (self.title)
+    title= models.CharField(max_length=100, unique=True)
+    def __str__(self):
+    return '%s' % (self.title)
 
 
     @permalink
