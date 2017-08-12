@@ -1,23 +1,14 @@
------BEGIN RSA PRIVATE KEY-----
-MIIEogIBAAKCAQEAgP2hgCc5WsBTsmGL2S1zlCJhGeNzw7sxdvTAhM4nxMyb9apC6YFsfGBsT4wa
-dUf2aR+iRGGdeo+2i6DijbMzCRTg8S1QIzfOVw27EeumSD39Eoe61vQ/FHza0BKa3H/ZY9uKBniQ
-VzO96CmY3iwSDG+ThSiXLIgc8gA3j1ThImZBmZSuBtHP2qLkAWFZshO1CG0N1xxajcSBetOa9Wtt
-dkdvvU3/uZx9YGeIxZWiUjipCWm4dnjf3hZu8BQgohfUxX8H+0Rs0sP48mc6MZ4Xm5anxiMXtx0k
-+noXamOLhoC64Jx8v0vM6pi9qzXtXoQftYS79kR/egxVZEVI/VGAxQIDAQABAoIBADkTgY3aTVep
-uJ866I29veGzYLH64jOetiGD5VgefJxpSS1oHFmEikNyyxpbzS1OHWugssV9SBh+VPDtzLGUtKV1
-Fp/BRC+BNw1wJvGkCxz2SPAVHQiWZP8kzBG72chtzfyQnT+Fw6DCZWrAVUMhzw6vpGAMePAcfmpa
-zDrg/QmiAtKx36QAznufAQnZxR6UKqq3hvT5VhR4FFenIV5qvVJOMO1ZG6ulGr8KBjPsMfGQt9mv
-i91F95kfDc+SbaqNeoxQRGhG0CrvSKHS1GZuXfA/cWEIeMsK4jgxmSyVTHF4DuTf68JJXomIKxrH
-kmG7kDPY9B79G9MqSLqL3eckCJUCgYEAufxZwZ37gslyLu0HlrJMYsYQf9Zp7AK2eTNrMamLV63f
-c9MFV0alrVny2L6F/7eiXCP0VgzAvMRohcTTSSj1UFtFrcgXwtjdN88MUkY8lNSFN2R6PACtdoHs
-h6fDQxeCyZ7U3aTgMRJX2nu9PQJNlfFrkQ18W3hdjmVRkKy68WsCgYEAsYycJF7gE/tzonQ0n3/F
-i3TGoi3JivG4xjRcpwHhBe1zyzB012gkon1cVpDy/6kn9zoWiF/ebMAopUSj43YtHB2AoZYUiI5W
-oBOjK0hkw9w3ZLTxeByhejNF9tDBYOONDpVzwD3EHma6uXBVMwlqr2DGOtgamER5PLMdfVXpco8C
-gYBlMKiBEHyMPyAx6eLMGfw3bX4Cn90HfL5dGR3EanOW49IEyZZJUvXHaH4ZcSek5vueWC2TN+MR
-kWcxCNLQJkm6S76Qe6J579YEjFEu3moNq8dDSRa8WL4IEU5ozF0PvtX47sLwSMl1yX4lMFfYvs0J
-vM2CoSy887MrS3LiXShlOwKBgGcdkLmW2HECgsAA2Wcg3+wEYDBkgz7M8FE8q+raroOwyqVheRp5
-g31TbUNhX5+X8HwnIlsFwrpKR9DkMoKyabSAdepirX45nJnPjd5fZxZRWWKFrA/kIOxFxwZ3azgI
-MC4eImGt/a7iXuPAF9tSRsGgZMBcLeXtLrRQGnpmYPSFAoGAMVy5zrDHg+lKyswXtuG/WS0c9bTr
-BsAzxnYE2Znxl50oqhnAJpxuTUcBI+0adi8JyMVxY+neKC/rzF+PtALHo2xHwe6IW4Dkf6kARrE0
-Y27HHphw+Z9Bw8s4B61XbiUK0HwS40RtKsyJ0u53mx5Wm2wEp8wjL+EjFWL0owaW5z0=
------END RSA PRIVATE KEY-----
+### Django Backend
+## Setup
+# Server
+Run the connectSSH file as a bash script to ssh to the AWS server
+# Server side Django
+Pull the newest version to the working directory located at ~/WT-make-athon/djangoProject.
+Run coomand "python3 manage.py runserver"
+## Use
+# API
+http://http://34.212.12.183/api/content
+Returns all events, ordered by the time there were posted.
+# Admin
+Login: WT
+Password: The wifi password.
