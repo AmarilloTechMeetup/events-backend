@@ -18,7 +18,7 @@ class list_category(generics.ListAPIView):
 class list_event(generics.ListAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
-        return Response("{'html':'MORE html'}")
+        return Content.objects.all()
 
 
 
