@@ -30,10 +30,19 @@ class Category(models.Model):
         return ('view_category', None, { 'slug': self.slug })
 
 class Event(models.Model):
-    title= models.TextField(help_text="Full HTML allowed. Keep headers at h2 or smaller.")
+    title= models.CharField(max_length=100, unique=True)
+    description=models.TextField(help_text="Full HTML allowed. Keep headers at h2 or smaller.")
+    address1= models.CharField(max_length=50)
+    address2= models.CharField(max_length=50)
+    city= models.CharField(max_length=2)
+    #state= models.TextField(help_text="Full HTML allowed. Keep headers at h2 or smaller.")
+    #zipcode= models.IntegerField()
+    datetime=models.DateTimeField(db_index=True, default=now)
+    cost=models.FloatField(default=0.0
+    picture= models.TextField(db_column='data',blank=True)
+    
     def __str__(self):
         return '%s' % (self.title)
-
 
     @permalink
     def get_absolute_url(self):
