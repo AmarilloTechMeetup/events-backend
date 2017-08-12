@@ -16,7 +16,7 @@ class list_category(generics.ListAPIView):
         return Content.objects.order_by('slug',).all()
 
 class list_event(generics.ListAPIView):
-    serializer_class = CategorySerializer
+    serializer_class = EventSerializer
     def get_queryset(self):
         return """<html>
 					<head>
