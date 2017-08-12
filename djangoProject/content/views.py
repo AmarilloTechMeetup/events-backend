@@ -20,12 +20,8 @@ class list_event(generics.ListAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
         return Event.objects.all()
-    
-    @csrf_exempt
-    def post(self, *args, **kwargs):
-        import pdb; pdb.set_trace()
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def list_event(request):
     """
     List all snippets, or create a new snippet.
