@@ -24,11 +24,13 @@ def list_event(request):
     """
     
     if request.method == 'GET':
-        until = request.GET['until']
         events = []
-        if until:
+        if 'until' in request.GET.keys():
+            until = request.GET['until']
             events = Event.objects.filter(datetime__lt=dt.datetime.strptime(until, "%Y-%m-%dT%H:%M:%S"))
-        events = Event.objects.all()
+        else:
+            events = Event.objects.all()
+            
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
        
