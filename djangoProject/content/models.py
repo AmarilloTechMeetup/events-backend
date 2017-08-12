@@ -38,7 +38,7 @@ class Event(models.Model):
     #state= models.TextField(help_text="Full HTML allowed. Keep headers at h2 or smaller.")
     #zipcode= models.IntegerField()
     datetime=models.DateTimeField(db_index=True, default=now)
-    cost=models.FloatField(default=0.0
+    cost=models.FloatField(default=0.0)
     picture= models.TextField(db_column='data',blank=True)
     
     def __str__(self):
