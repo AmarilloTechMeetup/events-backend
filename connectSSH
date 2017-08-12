@@ -1,0 +1,1 @@
+ssh -i WT.pem ubuntu@34.212.12.183
