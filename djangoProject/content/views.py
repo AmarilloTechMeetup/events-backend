@@ -32,7 +32,7 @@ def list_event(request):
     """
 
     if request.method == 'POST':
-        serializer = SnippetSerializer(data=request.data)
+        serializer = EventSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
