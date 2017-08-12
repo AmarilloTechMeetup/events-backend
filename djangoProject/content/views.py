@@ -15,5 +15,16 @@ class list_category(generics.ListAPIView):
     def get_queryset(self):
         return Content.objects.order_by('slug',).all()
 
+class list_event(generics.ListAPIView):
+    serializer_class = CategorySerializer
+    def get_queryset(self):
+        return """<html>
+					<head>
+					</head>
+					<body>
+						<p>Hello World</p>
+					</body>
+				</html>"""
+
 
 
