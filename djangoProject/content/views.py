@@ -16,7 +16,7 @@ class list_category(generics.ListAPIView):
     def get_queryset(self):
         return Content.objects.order_by('slug',).all()
 
-class list_event(generics.ListCreateAPIView):
+class list_event(generics.ListAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
         return Event.objects.all()
@@ -25,7 +25,7 @@ class list_event(generics.ListCreateAPIView):
     def post(self, *args, **kwargs):
         import pdb; pdb.set_trace()
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def list_event(request):
     """
     List all snippets, or create a new snippet.
