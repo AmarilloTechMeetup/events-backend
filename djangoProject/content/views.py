@@ -15,12 +15,13 @@ class list_category(generics.ListAPIView):
     def get_queryset(self):
         return Content.objects.order_by('slug',).all()
 
-class list_event(request):
-    
-    
+class list_event(generics.ListAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
         return Event.objects.all()
+    
+    def post_queryset(self):
+        pass
 
 
 
