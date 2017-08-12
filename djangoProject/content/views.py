@@ -19,5 +19,7 @@ class list_event(generics.ListCreateAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
         return Event.objects.all()
+    
+    @csrf_exempt
     def post(self, *args, **kwargs):
         import pdb; pdb.set_trace()
