@@ -29,3 +29,11 @@ class Category(models.Model):
     def get_absolute_url(self):
         return ('view_category', None, { 'slug': self.slug })
 
+class Event(models.Model):
+	title= models.CharField(max_length=100, unique=True)
+	def __str__(self):
+        return '%s' % (self.title)
+
+    @permalink
+    def get_absolute_url(self):
+        return ('view_post', None, { 'slug': self.slug })
