@@ -16,3 +16,11 @@ class CategorySerializer(serializers.ModelSerializer):
         """Meta class to map serializer's fields with the model fields."""
         model = Category
         fields = '__all__'
+        
+class EventSerializer(serializers.ModelSerializer):
+    """Serializer to map the Model instance into JSON format."""
+         
+    class Meta:
+        """Meta class to map serializer's fields with the model fields."""
+        model = Event
+        fields = '__all__'
