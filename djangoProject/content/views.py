@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import ContentSerializer, CategorySerializer, EventSerializer
 from .models import *
+from django.views.decorators.csrf import csrf_exempt
 
 class list_content(generics.ListAPIView):
     serializer_class = ContentSerializer
