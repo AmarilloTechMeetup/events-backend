@@ -26,6 +26,11 @@ def list_event(request):
     """
     List all snippets, or create a new snippet.
     """
+    
+    if request.method == 'GET':
+        events = Event.objects.all()
+        serializer = EventSerializer(events, many=True)
+        return Response(serializer.data)
 
     if request.method == 'POST':
         serializer = EventSerializer(data=request.data)
