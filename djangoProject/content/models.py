@@ -30,7 +30,7 @@ class Category(models.Model):
         return ('view_category', None, { 'slug': self.slug })
 
 class Event(models.Model):
-    title= models.CharField(max_length=100, unique=True)
+    title= models.TextField(help_text="Full HTML allowed. Keep headers at h2 or smaller.")
     def __str__(self):
         return '%s' % (self.title)
 
