@@ -4,7 +4,7 @@ from .models import *
 
 
 class ContentAdmin(a.ModelAdmin):
-    list_display = ['purpose', 'title', 'posted']
+    list_display = ['title', 'posted']
     ordering = ['posted']
 
 class CategoryAdmin(a.ModelAdmin):
