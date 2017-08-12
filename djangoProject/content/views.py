@@ -31,7 +31,7 @@ def list_event(request):
     List all snippets, or create a new snippet.
     """
 
-    elif request.method == 'POST':
+    if request.method == 'POST':
         serializer = SnippetSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
