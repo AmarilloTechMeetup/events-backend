@@ -32,7 +32,7 @@ class Category(models.Model):
 class Event(models.Model):
 	title= models.CharField(max_length=100, unique=True)
 	def __str__(self):
-        return '%s' % (self.title)
+	return '%s' % (self.title)
 
     @permalink
     def get_absolute_url(self):
