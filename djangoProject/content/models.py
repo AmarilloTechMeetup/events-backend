@@ -35,6 +35,6 @@ class Event(models.Model):
         return '%s' % (self.title)
 
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view_post', None, { 'slug': self.slug })
+   # @permalink
+   # def get_absolute_url(self):
+   #     return ('view_post', None, { 'slug': self.slug })
