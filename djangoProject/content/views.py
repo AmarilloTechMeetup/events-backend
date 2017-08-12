@@ -15,7 +15,9 @@ class list_category(generics.ListAPIView):
     def get_queryset(self):
         return Content.objects.order_by('slug',).all()
 
-class list_event(generics.ListAPIView):
+class list_event(generics.ListCreateAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
         return Event.objects.all()
+    def post(self, *args, **kwargs):
+        import pdb; pdb.set_trace()
