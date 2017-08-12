@@ -13,7 +13,7 @@ class Content(models.Model):
     posted = models.DateTimeField(db_index=True, default=now)
     category = models.ForeignKey('content.Category',blank=True,null=True)
     def __str__(self):
-        return '%s, %s' % (self.title)
+        return '%s' % (self.title)
 
     @permalink
     def get_absolute_url(self):
