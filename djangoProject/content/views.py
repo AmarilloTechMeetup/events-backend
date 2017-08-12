@@ -24,3 +24,16 @@ class list_event(generics.ListCreateAPIView):
     @csrf_exempt
     def post(self, *args, **kwargs):
         import pdb; pdb.set_trace()
+
+@api_view(['GET', 'POST'])
+def list_event(request):
+    """
+    List all snippets, or create a new snippet.
+    """
+
+    elif request.method == 'POST':
+        serializer = SnippetSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
