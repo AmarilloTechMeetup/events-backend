@@ -19,9 +19,3 @@ class list_event(generics.ListAPIView):
     serializer_class = EventSerializer
     def get_queryset(self):
         return Event.objects.all()
-    
-    def post_queryset(self):
-        pass
-
-
-
