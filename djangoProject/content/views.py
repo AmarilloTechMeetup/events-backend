@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from .serializers import ContentSerializer, CategorySerializer, EventSerializer
 from .models import *
 from django.views.decorators.csrf import csrf_exempt
+import dateutil.parser
 
 class list_content(generics.ListAPIView):
     serializer_class = ContentSerializer
@@ -23,9 +24,14 @@ def list_event(request):
     """
     
     if request.method == 'GET':
+        until = request.GET['until']
+        events = []
+        if until:
+            events = Event.objects.filter(datetime__lt=dateutil.parser.parse(until))
         events = Event.objects.all()
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
+       
 
     if request.method == 'POST':
         serializer = EventSerializer(data=request.data)
