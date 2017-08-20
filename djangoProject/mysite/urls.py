@@ -17,13 +17,15 @@ from django.conf.urls import url, include
 from captcha_admin import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
 
-admin.site.site_title = admin.site.index_title = 'Nicholas Works'
+admin.site.site_title = admin.site.index_title = 'Site Admin'
 admin.site.site_header = 'Administration'
 
 urlpatterns = [
     url(r'^api/', include('content.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^.*$', RedirectView.as_view(url='https://www.amarilloeventhub.com', permanent=False), name='index'),
 ]
 
 admin.autodiscover() 
