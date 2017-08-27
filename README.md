@@ -17,20 +17,22 @@ To setup a dev environment for the back end:
 + Connect to the instance as root
 + Run the setup script:
 
-'''
+```
+
 curl 'https://raw.githubusercontent.com/AmarilloTechMeetup/events-backend/master/dev-setup.sh' | bash
 
-'''
+```
 
 or if you want to be really clever and are using a cloud provider that supports cloud script
 
-'''
+
+```
 #cloud-config
 
 runcmd:
   -  curl 'https://raw.githubusercontent.com/AmarilloTechMeetup/events-backend/master/dev-setup.sh' | bash
 
-'''
+```
 
 + Once the script completes you can test that that your setup is working by visiting http://{YOUR IP ADDRESS}/api/event/
 
