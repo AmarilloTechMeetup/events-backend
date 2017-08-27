@@ -1,8 +1,7 @@
 # Amarillo Event Hub Backend
 
-This repository is a Django backend for the Amarillo Even Hub project. 
-
-This project was a Make-a-thon worked on by a team of volunteers over the evening of August 11, 2017.
+This repository is a Django backend for the Amarillo Event Hub project, a collaborative, Make-a-thon hack built
+by a team of volunteers over the evening of August 11, 2017.
 
 This will be an open source project, as soon as we agree on a license.
 
@@ -22,6 +21,17 @@ To setup a dev environment for the back end:
 curl 'https://raw.githubusercontent.com/AmarilloTechMeetup/events-backend/master/dev-setup.sh' | bash
 
 '''
+
+or if you want to be really clever and are using a cloud provider that supports cloud script
+
+'''
+#cloud-config
+
+runcmd:
+  -  curl 'https://raw.githubusercontent.com/AmarilloTechMeetup/events-backend/master/dev-setup.sh' | bash
+
+'''
+
 + Once the script completes you can test that that your setup is working by visiting http://{YOUR IP ADDRESS}/api/event/
 
 
