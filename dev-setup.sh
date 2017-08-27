@@ -5,7 +5,10 @@
 # This assumes that the user is root on an Ubuntu 16.04 instance.
 # This has been tested primarily on Digital Ocean with their smallest droplet.
 # It should work with a few tweaks just about anywhere.
-
+#
+# Based on an example by Rohini Choudhary 
+# at: https://jee-appy.blogspot.com/2017/01/deply-django-with-nginx.html
+#
 # TODO: convert this to use environment variables for production
 
 # install everything we need
