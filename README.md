@@ -11,7 +11,22 @@ The front end for this project is [also on GitHub] (https://github.com/AmarilloT
 
 If you want to help with the project, just fork it on GitHub and send us a pull request.
 
-To setup a dev environment for the back end:
+## Quickstart
+
+[][![Dply](https://dply.co/b.svg)](https://dply.co/b/AbLM1dqg) 
+
+Connect to the server then
+
+```
+su - django to 
+```
+Seriously, that's it.
+
+You have two hours free, or you can pay a couple bucks for a day long coding session, or you can commit/push and click the button again.
+
+## Manual Stup 
+
+To setup a dev environment for the back end on your own server:
 
 + Spin-up an Ubuntu 16.04 instance on your favorite cloud host.
 + Connect to the instance as root
@@ -37,10 +52,15 @@ runcmd:
 + Once the script completes you can test that that your setup is working by visiting http://{YOUR IP ADDRESS}/api/event/
 
 
+## Now what?
+
 The good bits will be in /home/django/events-backend/app.
 
-
 The backend stack is niginx -> gunicorn -> django -> postgresql.
+
+## Warnings and Disclaimers
+
+> You could shoot your eye out kid. - Santa
 
 This is very much a work in progress and providing a place for people to learn and share their work is as important as building a good site.
 
