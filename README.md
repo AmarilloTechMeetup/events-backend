@@ -13,7 +13,7 @@ If you want to help with the project, just fork it on GitHub and send us a pull 
 
 ## Quickstart
 
-[][![Dply](https://dply.co/b.svg)](https://dply.co/b/AbLM1dqg) 
+[![Dply](https://dply.co/b.svg)](https://dply.co/b/AbLM1dqg) 
 
 Connect to the server then
 
