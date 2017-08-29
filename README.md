@@ -18,13 +18,13 @@ If you want to help with the project, just fork it on GitHub and send us a pull 
 Connect to the server then
 
 ```
-su - django to 
+su - django
 ```
 Seriously, that's it.
 
 You have two hours free, or you can pay a couple bucks for a day long coding session, or you can commit/push and click the button again.
 
-## Manual Stup 
+## Manual Setup 
 
 To setup a dev environment for the back end on your own server:
 
@@ -60,7 +60,7 @@ The backend stack is niginx -> gunicorn -> django -> postgresql.
 
 ## Warnings and Disclaimers
 
-> You could shoot your eye out kid. - Santa
+> You'll shoot your eye out kid! - Santa
 
 This is very much a work in progress and providing a place for people to learn and share their work is as important as building a good site.
 
